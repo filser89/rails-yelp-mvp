@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Add a restaurant</h1>
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: Restaurant::CATEGORY, as: :radio_buttons, wrapper_html: { class: 'capitalize' } %>
+    <%= f.button :submit, "Add restaurant",  class: "btn btn-success" %>
+
+  <% end %>
+</div>
